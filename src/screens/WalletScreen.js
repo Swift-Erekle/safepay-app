@@ -37,7 +37,7 @@ export default function WalletScreen() {
     if (!silent) setLoading(true);
     try {
       const [w, tx, wds, bks] = await Promise.all([
-        apiFetch("/wallet/balance", {}, token),
+        apiFetch("/wallet", {}, token),
         apiFetch("/wallet/transactions?limit=20", {}, token),
         apiFetch("/wallet/withdrawals", {}, token),
         apiFetch("/bank-accounts", {}, token),
