@@ -25,7 +25,7 @@ export default function App() {
   return (
     <SafeAreaProvider>
       <StatusBar style="light" backgroundColor="#0A1628" translucent={false} />
-      <SafeAreaView style={styles.container} edges={["top", "left", "right"]}>
+      <SafeAreaView style={styles.container} edges={["top", "bottom", "left", "right"]}>
         <WebView
           ref={webviewRef}
           source={{ uri: SAFEPAY_URL }}
