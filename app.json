@@ -9,7 +9,9 @@
     "splash": {
       "backgroundColor": "#0A1628"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": false,
       "bundleIdentifier": "ge.safepay.app"
@@ -19,6 +21,11 @@
         "backgroundColor": "#0A1628"
       },
       "package": "ge.safepay.app"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "4edd9fef-058b-4890-b3ee-baf488d277d4"
+      }
     }
   }
 }
