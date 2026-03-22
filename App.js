@@ -4,7 +4,7 @@ import { SafeAreaView, StyleSheet, BackHandler } from "react-native";
 import { WebView } from "react-native-webview";
 import { useRef, useEffect } from "react";
 
-const SAFEPAY_URL = "https://seven.vercel.app";
+const SAFEPAY_URL = "https://safepay-seven.vercel.app";
 
 export default function App() {
   const webviewRef = useRef(null);
