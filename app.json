@@ -9,45 +9,16 @@
     "splash": {
       "backgroundColor": "#0A1628"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "ge.safepay.app",
-      "infoPlist": {
-        "NSCameraUsageDescription": "საჭიროა გარიგების ფოტოების გადასაღებად",
-        "NSPhotoLibraryUsageDescription": "საჭიროა ფოტოების ასატვირთად"
-      }
+      "bundleIdentifier": "ge.safepay.app"
     },
     "android": {
       "adaptiveIcon": {
         "backgroundColor": "#0A1628"
       },
-      "package": "ge.safepay.app",
-      "permissions": [
-        "CAMERA",
-        "READ_EXTERNAL_STORAGE",
-        "WRITE_EXTERNAL_STORAGE"
-      ]
-    },
-    "plugins": [
-      [
-        "expo-notifications",
-        {
-          "icon": "./assets/icon.png",
-          "color": "#1DB954"
-        }
-      ],
-      "expo-asset",
-      "expo-font",
-      "expo-router"
-    ],
-    "extra": {
-      "router": {},
-      "eas": {
-        "projectId": "4edd9fef-058b-4890-b3ee-baf488d277d4"
-      }
+      "package": "ge.safepay.app"
     }
   }
 }
