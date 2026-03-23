@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "SafePay.ge",
+    "name": "SafePay",
     "slug": "safepay-app",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -9,9 +9,7 @@
     "splash": {
       "backgroundColor": "#0A1628"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": false,
       "bundleIdentifier": "ge.safepay.app"
@@ -20,12 +18,21 @@
       "adaptiveIcon": {
         "backgroundColor": "#0A1628"
       },
-      "package": "ge.safepay.app"
-    },
-    "extra": {
-      "eas": {
-        "projectId": "4edd9fef-058b-4890-b3ee-baf488d277d4"
-      }
+      "package": "ge.safepay.app",
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [
+            {
+              "scheme": "https",
+              "host": "safepay-seven.vercel.app",
+              "pathPrefix": "/"
+            }
+          ],
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ]
     }
   }
 }
