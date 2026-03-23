@@ -38,6 +38,7 @@ export default function App() {
           userAgent="SafePay-App/1.0 (Android)"
           startInLoadingState={true}
           pullToRefreshEnabled={true}
+          overScrollMode="always"
         />
       </SafeAreaView>
     </SafeAreaProvider>
