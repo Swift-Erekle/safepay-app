@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, BackHandler } from "react-native";
+import { StyleSheet, BackHandler, View } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { WebView } from "react-native-webview";
 import { useRef, useEffect, useState } from "react";
@@ -10,7 +10,6 @@ const BASE = "https://safepay-seven.vercel.app";
 export default function App() {
   const webviewRef = useRef(null);
   const [startUrl, setStartUrl] = useState(BASE);
-  const [ready, setReady] = useState(false);
 
   useEffect(() => {
     // ბმულიდან გახსნისას — კონკრეტული URL
@@ -18,8 +17,7 @@ export default function App() {
       if (url && url.startsWith(BASE)) {
         setStartUrl(url);
       }
-      setReady(true);
-    }).catch(() => setReady(true));
+    }).catch(() => {});
 
     // App background-ში იყო, ახალი ბმული მოვიდა
     const sub = Linking.addEventListener("url", ({ url }) => {
@@ -30,7 +28,6 @@ export default function App() {
       }
     });
 
-    // Back button
     const onBack = () => {
       if (webviewRef.current) { webviewRef.current.goBack(); return true; }
       return false;
@@ -42,8 +39,6 @@ export default function App() {
       BackHandler.removeEventListener("hardwareBackPress", onBack);
     };
   }, []);
-
-  if (!ready) return null;
 
   return (
     <SafeAreaProvider>
