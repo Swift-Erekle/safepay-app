@@ -9,9 +9,7 @@
     "splash": {
       "backgroundColor": "#0A1628"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": false,
       "bundleIdentifier": "ge.safepay.app"
@@ -21,6 +19,12 @@
         "backgroundColor": "#0A1628"
       },
       "package": "ge.safepay.app",
+      "googleServicesFile": "./google-services.json",
+      "permissions": [
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.RECEIVE_BOOT_COMPLETED",
+        "android.permission.VIBRATE"
+      ],
       "intentFilters": [
         {
           "action": "VIEW",
@@ -32,13 +36,21 @@
               "pathPrefix": "/"
             }
           ],
-          "category": [
-            "BROWSABLE",
-            "DEFAULT"
-          ]
+          "category": ["BROWSABLE", "DEFAULT"]
         }
       ]
     },
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#00C853",
+          "sounds": [],
+          "mode": "production"
+        }
+      ]
+    ],
     "extra": {
       "eas": {
         "projectId": "4edd9fef-058b-4890-b3ee-baf488d277d4"

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "695955361670",
+    "project_id": "safepay-2dfe2",
+    "storage_bucket": "safepay-2dfe2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:695955361670:android:1f29d5de36c91850916607",
+        "android_client_info": {
+          "package_name": "ge.safepay.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxp6yfOjxhFB5dtewLPjpsqarv6v61c5I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
